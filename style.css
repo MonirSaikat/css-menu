@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap");
+
+:root {
+  --color-primary: #fff;
+  --color-secondary: #333;
+  --box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --font-montserrat: "Montserrat", sans-serif;
+  --nav-font: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: var(--font-montserrat);
+}
+
+body {
+  min-height: 100vh;
+  background: url("./img/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-primary);
+  box-shadow: var(--box-shadow);
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  font-weight: bolder;
+  font-size: 25px;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a {
+  font-size: var(--nav-font);
+  padding: 20px;
+  color: var(--color-secondary);
+  display: block;
+}
+
+header .navbar ul li a:focus,
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: var(--color-primary);
+  display: none;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+header #menu-bar {
+  display: none;
+}
+
+header #menu-label {
+  font-size: var(--nav-font);
+  color: var(--color-secondary);
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 20px;
+  }
+
+  header #menu-label {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-primary);
+    border-top: rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  header .navbar li {
+    width: 100%;
+  }
+
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+
+  header .navbar ul li ul li {
+    background-color: #eee;
+  }
+
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+
+  header #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}

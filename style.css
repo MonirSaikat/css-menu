@@ -10,7 +10,7 @@
   --box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   --font-montserrat: "Montserrat", sans-serif;
-  --nav-font: 18px;
+  --nav-font: 16px;
   --topbar-height: 50px;
 }
 
@@ -97,6 +97,7 @@ header .navbar ul li ul {
   width: 200px;
   background: var(--color-primary);
   display: none;
+  box-shadow: var(--box-shadow);
 }
 
 header .navbar ul li ul li {

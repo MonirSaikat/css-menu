@@ -7,29 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-    <title>My School</title>
-
-    <style>
-        .spacer {
-            margin-top: 63px;
-        }
-    </style>
+    <title>Contact</title>
 </head>
 
 <body>
 
+    <!-- topbar -->
     <div id="topbar">
         <p>+8801300000000, +8801500000000</p>
         <p>Tushbhander, Kaliganj, Rangpur</p>
     </div>
+    <!-- end topbar -->
 
     <!-- header -->
     <header>
-        <a href="" class="logo">
+        <a href="index.html" class="logo">
             <img src="img/logo.png" alt="logo">
             <span>My School</span>
         </a>
@@ -39,11 +32,11 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="" class="active">home</a></li>
+                <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="#">pages + </a>
                     <ul>
-                        <li><a href="blogs.html">blogs</a></li>
+                        <li><a href="#">blogs</a></li>
                         <li><a href="#">services + </a>
                             <ul>
                                 <li><a href="#">html</a></li>
@@ -60,43 +53,18 @@
                         <li><a href="#">flex gallery</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">contact</a></li>
+                <li><a href="#" class="active">contact</a></li>
             </ul>
         </nav>
     </header>
+    <!-- end header -->
 
-    <div class="spacer"></div>
-    <div id="banner">
-        <div class="slider">
-            <div class="slide">
-                <img src="img/my_school.jpg" alt="Slide 1" title="Honorable Education Minister in our school">
-            </div>
-            <div class="slide">
-                <img src="img/pm.jpg" alt="Slide 2" title="Our prime minister">
-            </div>
-            <div class="slide">
-                <img src="img/banner.jpg" alt="Slide 3" title="Caption">
-            </div>
-        </div>
+    <!-- title section -->
+    <div class="title-section">
+        <h2>Contact Us</h2>
     </div>
-
-
-    <script>
-        $(document).ready(function () {
-            $('.slider').bxSlider({
-                mode: 'horizontal', // Slider mode: horizontal, vertical, or fade
-                auto: true,
-                pause: 3000,
-                controls: true,
-                pager: false,
-                infiniteLoop: true,
-                keyboardEnabled: true,
-                captions: true,
-            });
-        });
-    </script>
-
-
+    <!-- end title section -->
+    
 </body>
 
 </html>

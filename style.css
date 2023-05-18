@@ -3,31 +3,46 @@
 :root {
   --color-primary: #fff;
   --color-secondary: #333;
+  --color-info: #a78a65;
+  --color-success: rgb(99, 208, 115);
+  --color-danger: rgb(223, 47, 47);
+  --color-warning: rgb(233, 253, 61);
   --box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   --font-montserrat: "Montserrat", sans-serif;
   --nav-font: 18px;
+  --topbar-height: 50px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-transform: uppercase;
   text-decoration: none;
   font-family: var(--font-montserrat);
 }
 
 body {
   min-height: 100vh;
-  background: url("./img/bg.jpg") no-repeat;
+  /* background: url("./img/bg.jpg") no-repeat; */
   background-size: cover;
   background-position: center;
 }
 
+#topbar {
+  height: var(--topbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 0 1rem;
+  background-color: var(--color-info);
+  color: var(--color-primary);
+}
+
 header {
   position: fixed;
-  top: 0;
+  top: var(--topbar-height);
   left: 0;
   right: 0;
   background: var(--color-primary);
@@ -37,6 +52,7 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  text-transform: uppercase;
 }
 
 header .logo {
@@ -48,8 +64,8 @@ header .logo {
 }
 
 header .logo img {
-    width: 40px;
-    margin-right: 10px;
+  width: 40px;
+  margin-right: 10px;
 }
 
 header .navbar ul {
@@ -107,6 +123,38 @@ header #menu-label {
   color: var(--color-secondary);
   cursor: pointer;
   display: none;
+}
+
+/* ###################################################### */
+/* BANNAER */
+/* ###################################################### */
+#banner {
+  padding: 0;
+}
+
+/* ###################################################### */
+/* END OF BANNAER */
+/* ###################################################### */
+
+/* ###################################################### */
+/* BUTTONS */
+/* ###################################################### */
+.btn {
+  padding: 8px 20px;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+/* ###################################################### */
+/* END OF BUTTONS */
+/* ###################################################### */
+
+.title-section {
+  padding: 3rem;
+  text-align: center;
+  background: var(--color-info);
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-top: 63px;
 }
 
 @media (max-width: 992px) {
